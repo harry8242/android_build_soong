@@ -176,6 +176,8 @@ type productVariables struct {
 	DeviceKernelHeaders []string `json:",omitempty"`
 
 	LegacyCam  *bool `json:",omitempty"`
+
+	HasLegacyCameraHal1  *bool `json:",omitempty"`
 }
 
 func boolPtr(v bool) *bool {

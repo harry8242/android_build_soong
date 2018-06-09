@@ -572,3 +572,8 @@ func (c *deviceConfig) TargetHeaderPathDir() string {
 func (c *deviceConfig) LegacyCam() bool {
 	return Bool(c.config.ProductVariables.LegacyCam)
 }
+
+func (c *deviceConfig) HasLegacyCameraHal1() bool {
+	return Bool(c.config.ProductVariables.HasLegacyCameraHal1)
+}
+

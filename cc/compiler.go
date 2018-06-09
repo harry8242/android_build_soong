@@ -351,6 +351,10 @@ func (compiler *baseCompiler) compilerFlags(ctx ModuleContext, flags Flags) Flag
                         flags.CppFlags = append(flags.CppFlags, "-DLEGACY_CAMERA")
                 }
 
+                if (Bool(ctx.AConfig().ProductVariables.HasLegacyCamHal1)) {
+                        flags.CppFlags = append(flags.CppFlags, "-DLEGACY_CAMERA")
+                }
+
 		if ctx.Device() {
 			if Bool(compiler.Properties.Rtti) {
 				flags.CppFlags = append(flags.CppFlags, "-frtti")
